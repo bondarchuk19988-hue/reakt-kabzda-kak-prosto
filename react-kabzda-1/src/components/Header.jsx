@@ -1,10 +1,11 @@
 import React from 'react';
-import './Header.css';
+import s from'./Header.module.css';
 
 const Header = () => {
-    return <header className='header'>
-        <img src='https://cdn.itm.edu/assets/chat_GPT_edd1754ee5.webp'/>
+    return (<header className={s.header}>
+        <img/>
       </header >
+    )
 }
 
 export default Header;
