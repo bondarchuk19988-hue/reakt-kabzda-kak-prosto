@@ -1,10 +1,10 @@
 .item img{
-    width: 20px;
+    width: 40px;
 }
 .item {
     padding: 5px;
     margin: 10px;
-    width: 200px;
+    width: 600px;
     border-radius: 8px;
     background-color:  rgb(65, 64, 64);
 }

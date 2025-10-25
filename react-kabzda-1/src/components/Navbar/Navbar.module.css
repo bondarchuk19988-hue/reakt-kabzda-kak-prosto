@@ -8,11 +8,11 @@ grid-area: n;
     
 }
 .con{
-    padding: 10px;
-    margin: 10px;
+    padding: 30px;
+    margin: 30px;
+    font-size: 40px;
 }
 .con div{
 
     margin-top: 10px;
 }
- 
