@@ -1,4 +1,4 @@
-
+import { renderEntireTree} from './render';
 
 let state = {
     profilePage: {
@@ -24,6 +24,18 @@ let state = {
     }
 
 
+}
+
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        message: postMessage,
+        likeCount: Math.floor(Math.random()*19)+1,
+        img: ''
+
+    }
+    state .profilePage.posts.push(newPost)
+    renderEntireTree(state)
 }
 
 export default state;

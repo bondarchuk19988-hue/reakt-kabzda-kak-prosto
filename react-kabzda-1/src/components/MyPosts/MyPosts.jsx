@@ -10,13 +10,19 @@ const MyPosts = (props) => {
 let postsElement = 
     props.posts.map (p => <Post message={p.message} likeCount={p.likeCount} img={p.img}/>)
 
+let newPosytElement = React.createRef()
 
-    return <div className={s.content}>
-        <div>My posts</div>
-        <textarea></textarea>
-        <button>Add post</button>
+let addPost = () => {
+    let text = newPosytElement.current.value
+    props.addPost(text)
+}
+
+return <div className={s.content}>
+    <div>My posts</div>
+        <textarea ref={newPosytElement}></textarea>
+        <button onClick={ addPost }>Add post</button>
         <div className={s.posts}>
-           {postsElement}
+            {postsElement}
         </div>
     </div>
 }
