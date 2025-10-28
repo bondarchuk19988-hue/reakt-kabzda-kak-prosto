@@ -13,13 +13,18 @@ let postsElement =
 let newPosytElement = React.createRef()
 
 let addPost = () => {
+    props.addPost(props.newPostText)
+    props.updateNewPostText ('')
+}
+
+let onPostChange = () => {
     let text = newPosytElement.current.value
-    props.addPost(text)
+    props.updateNewPostText(text)
 }
 
 return <div className={s.content}>
     <div>My posts</div>
-        <textarea ref={newPosytElement}></textarea>
+        <textarea ref={newPosytElement} onChange={onPostChange} value={props.newPostText}/>
         <button onClick={ addPost }>Add post</button>
         <div className={s.posts}>
             {postsElement}
