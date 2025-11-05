@@ -1,4 +1,4 @@
-import { renderEntireTree} from './redux/render';
+import { renderEntireTree} from './../render';
 
 let state = {
     profilePage: {
@@ -43,6 +43,7 @@ export let addPost = (postMessage) => {
 }
 export let updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText
+    
     renderEntireTree(state)
 }
 
