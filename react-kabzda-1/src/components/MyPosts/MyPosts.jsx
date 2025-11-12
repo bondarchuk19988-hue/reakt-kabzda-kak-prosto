@@ -1,7 +1,8 @@
 import React from 'react';
 import s from './MyPosts.module.css';
 import Post from '../Post/Post';
-
+import { type } from '@testing-library/user-event/dist/type';
+import {updateNewPostTextActionCreator,addPostActionCreator} from "../../redux/state";
 
 
 
@@ -13,13 +14,13 @@ let postsElement =
 let newPostElement  = React.createRef()
 
 let addPost = () => {
-    props.addPost(props.newPostText)
-    props.updateNewPostText ('')
+    props.dispatch(addPostActionCreator())
 }
 
 let onPostChange = () => {
     let text = newPostElement .current.value
-    props.updateNewPostText(text)
+    let action = updateNewPostTextActionCreator(text)
+    props.dispatch(action)
 }
 
 return <div className={s.content}>
