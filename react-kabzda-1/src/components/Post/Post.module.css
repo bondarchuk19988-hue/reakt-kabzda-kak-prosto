@@ -8,5 +8,30 @@
     margin: 10px;
     width: 600px;
     border-radius: 8px;
-    background-color:  rgb(65, 64, 64);
+    background-color:  rgb(146, 146, 146);
+}
+
+.postContent {
+    margin-bottom: 15px;
+    min-height: 40px;
+}
+
+.likeButton {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease !important;
+}
+
+.likeButton:hover {
+    background: rgba(102, 126, 234, 0.15) !important;
+    transform: scale(1.1) !important;
+}
+
+.likeButton.liked {
+    background: rgba(255, 20, 147, 0.1) !important;
+    color: #ff1493 !important;
+}
+
+.likeButton.liked::before {
+    content: "💖" !important;
 }

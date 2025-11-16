@@ -1,6 +1,118 @@
-.dialogs{
-  display: grid;
-  grid-template-columns: 2fr 10fr;
-  font-size: 40px;
-  
+
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    gap: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    min-height: calc(100vh - 100px);
+}
+
+.dialogsItems {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.dialog {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.dialog:hover {
+    background: #f8f9fa;
+    border-color: #e9ecef;
+}
+
+.dialog.active {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.dialog.active a {
+    color: white;
+}
+
+.dialog a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+}
+
+.dialog a:hover {
+    color: #667eea;
+}
+
+.messages {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 18px;
+    margin-bottom: 15px;
+    max-width: 70%;
+    border: 1px solid #e9ecef;
+    position: relative;
+}
+
+.message:nth-child(odd) {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+.message:nth-child(even) {
+    background: #f8f9fa;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+.messages textarea {
+    width: 40%;
+    min-height: 60px;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 14px;
+    resize: vertical;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.messages textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.messages button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+.messages button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }

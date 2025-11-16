@@ -1,3 +1,91 @@
 .content{
     font-size: 40px;
 }
+
+.content {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.content > div:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    color: #696969;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #667eea;
+}
+
+/* Контейнер для текстареа и кнопки */
+.content .inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.content textarea {
+    width: 40%; /* Изменено с 40% на 100% */
+    min-height: 80px;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 14px;
+    resize: vertical;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.content textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.content button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start; /* Выравнивание кнопки по левому краю */
+    min-width: 150px;
+}
+
+.content button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(138, 138, 138, 0.4);
+}
+
+.content button:active {
+    transform: translateY(0);
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Альтернативный вариант с кнопкой справа */
+.content .inputContainer.row {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.content .inputContainer.row textarea {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.content .inputContainer.row button {
+    margin-bottom: 0;
+}

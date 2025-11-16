@@ -12,3 +12,45 @@ padding: 10px;
     width: 700px; 
     border-radius: 8px;
 }
+
+.profileInfo {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.profileImage {
+    width: 700px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+
+.profileDetails {
+    margin-top: 20px;
+}
+
+.profileName {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profileStatus {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.profileBio {
+    color: #777;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+}

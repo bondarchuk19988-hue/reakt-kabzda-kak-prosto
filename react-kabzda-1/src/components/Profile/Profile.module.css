@@ -1,10 +1,30 @@
-.content{
-background-color: rgb(95, 95, 95);
-grid-area: c;
-padding: 10px;
+
+
+.profile {
+    background: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-.content img{
-    border-radius: 8px;
-    width: 500px;
+.profileContainer {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.profileHeader {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+}
+
+.profileInfo {
+    background: white;
+    border-radius: 0 0 15px 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }

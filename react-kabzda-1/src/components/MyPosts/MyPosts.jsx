@@ -4,8 +4,6 @@ import Post from '../Post/Post';
 import { type } from '@testing-library/user-event/dist/type';
 import {updateNewPostTextActionCreator,addPostActionCreator} from "../../redux/state";
 
-
-
 const MyPosts = (props) => {
     
 let postsElement = 
@@ -25,12 +23,21 @@ let onPostChange = () => {
 
 return <div className={s.content}>
     <div>My posts</div>
-        <textarea ref={newPostElement } onChange={onPostChange} value={props.newPostText}/>
-        <button onClick={ addPost }>Add post</button>
-        <div className={s.posts}>
-            {postsElement}
-        </div>
+    
+    <div className={s.inputContainer}>
+        <textarea 
+            ref={newPostElement} 
+            onChange={onPostChange} 
+            value={props.newPostText}
+            placeholder="Напишите что-нибудь..."
+        />
+        <button onClick={addPost}>Add post</button>
     </div>
+    
+    <div className={s.posts}>
+        {postsElement}
+    </div>
+</div>
 }
 
 export default MyPosts;
